@@ -15,7 +15,7 @@ import CodersCamera from "react-native-coders-camera";
 
 // ...
 
-const result = await CodersCamera.multiply(3, 7);
+const result = await CodersCamera.openCamera();
 ```
 
 ## Contributing
