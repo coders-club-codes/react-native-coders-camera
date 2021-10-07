@@ -2,8 +2,7 @@
 
 @interface RCT_EXTERN_MODULE(CodersCamera, NSObject)
 
-RCT_EXTERN_METHOD(multiply:(float)a withB:(float)b
-                 withResolver:(RCTPromiseResolveBlock)resolve
+RCT_EXTERN_METHOD(openCamera:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
 @end

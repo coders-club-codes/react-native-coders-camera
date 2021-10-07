@@ -4,15 +4,17 @@ import { StyleSheet, View, Text } from 'react-native';
 import CodersCamera from 'react-native-coders-camera';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
+  const [result, setResult] = React.useState<string | undefined>();
 
   React.useEffect(() => {
-    CodersCamera.multiply(3, 7).then(setResult);
+    setTimeout(() => {
+      CodersCamera.openCamera().then(setResult);
+    }, 2000);
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text style={{ fontSize: 30 }}>Result: {result}</Text>
     </View>
   );
 }
